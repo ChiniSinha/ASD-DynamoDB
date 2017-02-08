@@ -1,0 +1,8 @@
+{
+    "key": "created_on",
+    "type": "date",
+    "value": 145838492,
+    "is_required": true,
+    "is_validated": true,
+    "is_mutable": false
+}
