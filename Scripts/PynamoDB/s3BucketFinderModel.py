@@ -15,7 +15,7 @@ class S3BucketFinderData(Model):
     class Meta:
         read_capacity_units = 1
         write_capacity_units = 1
-        table_name = "AutoMetaData"
+        table_name = "S3BucketFinderData"
         region = 'us-east-1'
     uuid = UnicodeAttribute(hash_key=True)
     s3_path = UnicodeAttribute(null=True)
@@ -23,7 +23,7 @@ class S3BucketFinderData(Model):
 
 # Create the table
 if not S3BucketFinderData.exists():
-    UserDefinedMetaData.create_table(wait=True)
+    S3BucketFinderData.create_table(wait=True)
 
 # Create a thread
 data_item = S3BucketFinderData(

@@ -15,7 +15,7 @@ class UserDefinedMetaData(Model):
     class Meta:
         read_capacity_units = 1
         write_capacity_units = 1
-        table_name = "AutoMetaData"
+        table_name = "UserDefinedMetaData"
         region = 'us-east-1'
     uuid = UnicodeAttribute(hash_key=True)
     project_name = UnicodeAttribute(null=True)
