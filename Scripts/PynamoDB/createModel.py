@@ -1,9 +1,15 @@
 from pynamodb.models import Model	
 from pynamodb.attributes import (UnicodeAttribute, NumberAttribute)
+import logging
 
-class MetaData(Model):
+logging.basicConfig()
+log = logging.getLogger("pynamodb")
+log.setLevel(logging.DEBUG)
+log.propagate = True
+
+class User(Model):
 	class Meta:
-		table_name = 'MetaData'
+		table_name = 'User'
 		region = 'us-east-1'	
 
 	UserName = UnicodeAttribute(hash_key=True)
